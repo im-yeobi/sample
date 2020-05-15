@@ -1,0 +1,17 @@
+server:
+  port: 8080  # 8080번 포트로 애플리케이션 실행
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/sample?serverTimezone=Asia/Seoul
+    username: root
+    password: jongyeob.kim
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop  # 스키마 확인만 하고 데이터베이스를 변경하지는 않는다. (데이터베이스 작업을 직접 해야 한다.)
+    open-in-view: false # View layer 에서 JPA 영속성 관련 세션 연결을 허용하지 않도록 변경.
+    generate-ddl: true
+#logging:
+#  level:
+#    io.commonplace.wetro: info
